@@ -1,6 +1,6 @@
 import userData from './log.js';
 
-const BASE = 'http://localhost:4000';
+const BASE = 'https://mern-amrutam-medlink.onrender.com';
 
 export async function fetchUsers() {
   try {
