@@ -1,0 +1,28 @@
+.container {
+	display: flex;
+	gap: 0.5rem;
+	flex-wrap: wrap;
+	justify-items: flex-end;
+	align-items: center;
+	margin: 0.75rem 0;
+    color: var(--text-dark);
+
+}
+
+.chip {
+	background: #EAF2EA;
+	padding: 0.35rem 0.6rem;
+	border-radius: 999px;
+	font-size: 0.85rem;
+}
+
+.clearBtn {
+	margin-left: 0.5rem;
+	background: transparent;
+	border: 1px solid var(--border-color);
+	padding: 0.35rem 0.6rem;
+	border-radius: 8px;
+	cursor: pointer;
+	border: 0;
+}
+

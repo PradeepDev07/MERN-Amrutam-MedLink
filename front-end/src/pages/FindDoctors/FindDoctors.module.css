@@ -1,0 +1,233 @@
+/* =========================================================
+   PAGE WRAPPER
+========================================================= */
+.FindDoctors {
+  width: 100%;
+  font-family: "Inter", sans-serif;
+  color: var(--text-primary);
+}
+
+/* =========================================================
+   HERO SECTION
+========================================================= */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 48px 1rem;
+  gap: 1rem;
+  background-color: var(--brand-light-green);
+}
+
+.content h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.3;
+  max-width: 800px;
+}
+
+/* =========================================================
+   NO DOCTORS MESSAGE
+========================================================= */
+.noDoctors {
+  margin-top: 2rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+}
+
+/* =========================================================
+   FILTERS
+========================================================= */
+.filtersSection,
+.filtersSectionedContainer {
+  padding: 0 1rem;
+}
+
+.filtersSection select,
+.filtersSection input {
+  border: 1px solid #d8dadf;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-size: 1rem;
+  background-color: white;
+  transition: border 0.2s ease;
+}
+
+.filtersSection select:hover,
+.filtersSection input:hover {
+  border-color: #6f947a;
+}
+
+/* =========================================================
+   GRID WRAPPER
+========================================================= */
+.doctorsList {
+  margin-top: 1.5rem;
+}
+
+.doctorsContainer {
+  width: 100%;
+  background: linear-gradient(180deg, rgba(58, 90, 64, 0.03), rgba(248, 249, 250, 0.02));
+  padding: 1rem 1.5rem;
+  border-radius: 16px;
+}
+
+/* =========================================================
+   GRID BEHAVIOR (LEFT ALIGNED)
+========================================================= */
+.doctorsGrid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 1.8rem;
+  justify-items: start;
+}
+
+/* =========================================================
+   DOCTOR CARD – NEW PREMIUM UI
+========================================================= */
+.doctorsGrid .card {
+  width: 100%;
+  max-width: 450px;
+
+  padding: 20px;
+  border-radius: 18px;
+  background: #fffdf7;
+
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  transition: all 0.25s ease;
+}
+
+/* Hover / Focus effect */
+.doctorsGrid .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+
+/* =========================================================
+   DOCTOR HEADER
+========================================================= */
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.card-header img {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #f2eedf;
+}
+
+.card-header .info {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-header .info .name {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.card-header .info .specialist {
+  font-size: 0.9rem;
+  color: #6d7b75;
+}
+
+/* =========================================================
+   DETAILS SECTION (Location, Languages, Experience)
+========================================================= */
+.card-details {
+  background: #fff7e6;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.04);
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card-details .row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  color: #454d47;
+}
+
+/* =========================================================
+   CONSULTATION FEE
+========================================================= */
+.card-fee {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #2e3f34;
+}
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+.card-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.card-buttons button {
+  padding: 12px 0;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Book button */
+.card-buttons .book-btn {
+  background: #3a5a40;
+  color: white;
+  border: none;
+}
+
+.card-buttons .book-btn:hover {
+  background: #2d4a33;
+}
+
+/* View Profile */
+.card-buttons .profile-btn {
+  background: #fff;
+  border: 2px solid #3a5a40;
+  color: #2e3f34;
+}
+
+.card-buttons .profile-btn:hover {
+  background: #eef6f0;
+}
+
+/* =========================================================
+   MOBILE RESPONSIVENESS
+========================================================= */
+@media (max-width: 768px) {
+  .content h1 {
+    font-size: 1.9rem;
+  }
+
+  .doctorsGrid {
+    grid-template-columns: 1fr;
+  }
+}

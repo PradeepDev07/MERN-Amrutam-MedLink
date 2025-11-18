@@ -1,0 +1,115 @@
+
+
+@media (max-width: 640px) {
+	.searchBar {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+
+		gap: 0.5rem;
+
+padding: 10px;
+		justify-content: center;
+	}
+
+	.searchInput {
+		flex: 1 1 auto;
+		padding: 0.5rem 0.75rem;
+		border-radius: 8px;
+		border: 	0.5px solid var(--border-color);
+		font-size: 0.95rem;
+		width: 100%;
+	}
+	.searchBtn {
+	background:transparent;
+	padding: 0.5rem 0.75rem;
+	border-radius: 8px;
+	border: none;
+	cursor: pointer;
+}
+.searchContainer {
+	width: 100%;
+	background-color: white;
+	display: flex;
+	padding: 5px;
+	border: 0.5px solid black;
+	border-radius: 5px;
+	gap:10px
+}
+.locationContainer {
+	width: 100%;
+	background-color: white;
+	display: flex;
+    align-items: center;
+	padding: 5px;
+	border: 0.5px solid black;
+	border-radius: 5px;
+	gap:10px
+	}	
+	.location{
+		flex: 1 1 auto;
+		padding: 0.5rem 0.75rem;
+		border-radius: 8px;
+		border: 0.5px solid var(--border-color);
+		font-size: 0.95rem;
+		width: 100%;
+	}
+
+}
+@media (min-width: 640px) {
+	.searchBar {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		max-width: 900px;
+		gap: 0.5rem;
+
+padding: 10px;
+		justify-content: center;
+	}
+
+	.searchInput {
+		flex: 1 1 auto;
+		padding: 0.5rem 0.75rem;
+		border-radius: 8px;
+		border: 0.5px solid var(--border-color);
+		font-size: 0.95rem;
+		width: 100%;
+	}
+	.searchBtn {
+	background:transparent;
+	padding: 0.5rem 0.75rem;
+	border-radius: 8px;
+	border: none;
+	cursor: pointer;
+}
+.searchContainer {
+	width: 100%;
+	background-color: white;
+	display: flex;
+	padding: 5px;
+	border: 0.5px solid black;
+	border-radius: 5px;
+	gap:10px
+}
+.locationContainer {
+	width: 100%;
+	background-color: white;
+	display: flex;
+    align-items: center;
+	max-width: 30%;
+	padding: 5px;
+	border: 0.5px solid black;
+	border-radius: 5px;
+	gap:10px
+	}	
+	.location{
+		flex: 1 1 auto;
+		padding: 0.5rem 0.75rem;
+		border-radius: 8px;
+		border: 0.5px solid var(--border-color);
+		font-size: 0.95rem;
+		width: 100%;
+	}
+
+}

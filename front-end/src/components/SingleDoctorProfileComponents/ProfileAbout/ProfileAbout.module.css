@@ -1,0 +1,136 @@
+.profileContainer{
+   display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width:500px ;
+    margin-top: 24px;
+
+border: 0.5px solid black;
+border-radius: 14px;
+}
+.profileAbout{
+background-color: #ffffff;
+color: black;
+border: 0.5px solid black;
+border-bottom-left-radius: 14px;
+border-bottom-right-radius: 14px;
+width: 100%;
+display: flex;
+flex-direction: column;
+gap: 12px;
+padding: 20px 10px;
+
+}
+.aboutContainer{
+      display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 16px;
+    border: 0.5px solid var(--border-color);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background-color:#F4F7EC;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+    gap: 12px;
+
+}
+.aboutContainer h1{
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--text-dark);
+}
+.following{
+    margin-top: 8px;
+    font-size: 14px;
+    color: var(--text-secondary);
+    border: 0.5px solid var(--border-color);
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;    
+}
+.following:hover {
+    background-color: var(--background-light);
+}
+.follow{
+    margin-top: 8px;
+    font-size: 14px;
+    color: black;
+    background-color: transparent;
+    border: 0.5px solid black;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;    
+}
+.showMore{
+    margin-top: 12px;
+    font-size: 14px;
+    color: var(--brand-green);
+    text-decoration: underline;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+.languagesSection{
+    margin-top: 12px;
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    padding: 8px ;
+}
+
+.languageList{
+display: flex;
+list-style: none;
+gap: 10px;
+padding: 0;
+}
+
+.languageItem{
+    background: #EAF2EA;
+    padding: 0.35rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+}
+.languageTitle{
+    display: inline-block;
+    font-weight: 600;
+}
+.socialLinkItem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #EAF2EA;
+    padding: 6px;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+.socialLinksSection{
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.divider{
+    height: 1px;
+    width: 80%;
+    background-color: var(--border-color);
+    margin-top: 12px;
+}
+.showMoreContainer{
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
+}
+
+@media screen and (min-width: 770px) {
+    .profileContainer{
+        max-width:700px ;
+    }
+}

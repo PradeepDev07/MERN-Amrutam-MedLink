@@ -1,0 +1,417 @@
+/* --- 🎨 Style Upgrade: Focus on Polish, Depth, and Hierarchy --- */
+
+/* Define your brand's green color from the logo */
+
+
+/* Global Styles */
+.landingPage {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    color: var(--text-dark);
+    background-color: var(--background-light);
+}
+
+/* Typography Enhancements */
+h1, h2, h3 {
+  color: var(--brand-dark);
+  letter-spacing: -0.5px; /* Tighter spacing for modern look */
+}
+
+h1 {
+  font-size: 3.2rem; /* Slightly larger */
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+h2 {
+  font-size: 2.4rem; /* Slightly larger */
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 50px; /* More vertical breathing room */
+}
+
+p {
+  font-size: 1.05rem; /* Slightly larger base font */
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+section {
+  padding: 80px 5%; /* Increased vertical padding for more impact */
+  max-width: 1280px; /* Slightly wider max container */
+  margin: 0 auto;
+}
+
+/* Button Styles */
+.btnPrimary {
+  background-color: var(--brand-green);
+  color: white;
+  border: none;
+  padding: 14px 28px; /* Slightly larger click area */
+  font-size: 1.05rem;
+  font-weight: 600;
+  border-radius: 10px; /* Slightly more rounded */
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  box-shadow: 0 4px 10px rgba(58, 90, 64, 0.3); /* Green shadow for lift */
+}
+
+.btnPrimary:hover {
+  background-color: var(--brand-dark);
+  transform: translateY(-2px); /* Subtle lift effect */
+  box-shadow: 0 6px 15px rgba(58, 90, 64, 0.4);
+}
+
+/* Navbar (Assuming a dedicated Navbar component handles most of this) */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 5%;
+  background-color: var(--background-light);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: var(--shadow-sm); /* Subtle shadow when scrolling */
+}
+
+.logoText {
+  font-size: 1.9rem;
+  font-weight: 800; /* Bolder logo */
+  color: var(--brand-dark);
+  letter-spacing: 0.5px;
+}
+
+.navLinks a {
+  margin: 0 18px;
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 500;
+  transition: color var(--transition-fast);
+}
+.navLinks a:hover {
+  color: var(--brand-green);
+}
+
+/* 2. Hero Section */
+.heroSection {
+  text-align: center;
+  padding: 100px 5%; /* Increased padding for emphasis */
+  background-color: var(--brand-light); /* Using the light brand color */
+}
+
+.heroSection h1 {
+  max-width: 800px;
+  margin: 0 auto 20px auto;
+}
+
+.heroSection p {
+  max-width: 650px;
+  margin: 0 auto 40px auto; /* More space before the button */
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+/* 3. How It Works */
+.howItWorksSection {
+  background-color: var(--background-light);
+}
+
+.stepsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 40px; /* Increased gap */
+  text-align: center;
+}
+
+.stepCard {
+  flex-basis: 30%;
+  padding: 30px 20px;
+  background-color: var(--background-grey);
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition-fast);
+}
+
+.stepCard:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.stepIcon {
+  font-size: 3rem; /* Larger icon */
+  line-height: 1;
+  color: var(--brand-green);
+  margin-bottom: 15px;
+}
+
+.stepCard h3 {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+
+/* 4. Specialties Section */
+.specialtiesSection {
+  background-color: var(--background-grey);
+}
+
+.specialtyGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Use auto-fit for better responsiveness */
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.specialtyCard {
+  background-color: white;
+  padding: 30px; /* Increased padding */
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: all var(--transition-fast);
+  border: 1px solid var(--border-color);
+}
+
+.specialtyCard:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  color: var(--brand-green);
+  border-color: var(--brand-green);
+}
+
+.viewAllLink {
+  display: block;
+  text-align: center;
+  margin-top: 30px;
+  font-weight: 700;
+  color: var(--brand-dark);
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+/* 5. Features Section */
+.featuresSection {
+  background-color: var(--background-light);
+}
+
+.featuresContainer {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  text-align: center;
+}
+
+.featureItem {
+  flex-basis: 30%;
+}
+
+.featureIcon {
+  font-size: 3rem;
+  color: var(--brand-green);
+  margin-bottom: 15px;
+}
+
+.featureItem h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* 6. Testimonials */
+.testimonialsSection {
+  background-color: var(--brand-light); /* Using brand light color */
+}
+
+.testimonialContainer {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.testimonialCard {
+  background-color: white;
+  padding: 35px;
+  border-radius: 16px; /* More pronounced radius */
+  box-shadow: var(--shadow-md);
+  flex-basis: 45%;
+  text-align: left;
+}
+
+.testimonialCard p {
+  font-style: italic;
+  font-size: 1.15rem;
+  margin-bottom: 20px;
+  color: var(--text-secondary);
+}
+
+.testimonialCard span {
+  font-weight: 700;
+  color: var(--brand-dark);
+  display: block;
+  margin-top: 10px;
+}
+
+/* 7. CTA Section */
+.ctaSection {
+  background-color: var(--brand-green);
+  text-align: center;
+  padding: 100px 5%; /* Large padding for high impact */
+}
+
+.ctaSection h2 {
+  color: var(--text-light);
+  font-size: 2.8rem;
+}
+
+.ctaSection p {
+  color: var(--text-light);
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+.ctaBtn {
+  background-color: white;
+  color: var(--brand-green);
+  font-size: 1.2rem;
+  padding: 16px 35px;
+  font-weight: 700;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow for pop */
+}
+.ctaBtn:hover {
+  background-color: var(--background-grey);
+}
+
+/* 8. Footer */
+.footer {
+  background-color: rgb(16, 16, 16);
+  color: var(--text-light);
+  padding: 60px 5% 30px;
+}
+
+.footerContainer {
+  display: flex;
+  justify-content: space-around; /* Use space-around for slightly wider spread */
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.footerColumn {
+  flex-basis: 22%; /* Adjusted width */
+  min-width: 150px;
+  padding: 0 10px;
+}
+
+.footerColumn h3 {
+  color: var(--brand-green); /* Use green for column headings */
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.footerColumn a {
+  display: block;
+  color: #c0c0c0;
+  text-decoration: none;
+  margin-bottom: 12px;
+  transition: color var(--transition-fast);
+}
+
+.footerColumn a:hover {
+  color: var(--text-light);
+}
+
+.footerBottom {
+  border-top: 1px solid #333;
+  padding-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.95rem;
+  color: #a0a0a0;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.footerLegal a {
+  color: #a0a0a0;
+  text-decoration: none;
+  margin-left: 25px;
+  transition: color var(--transition-fast);
+}
+.footerLegal a:hover {
+  color: var(--text-light);
+}
+
+
+/* --- Media Queries for Enhanced Responsiveness --- */
+
+@media (max-width: 1024px) {
+  .specialtyGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  section {
+    padding: 60px 5%;
+  }
+
+  /* Stack layout elements */
+  .stepsContainer,
+  .featuresContainer,
+  .testimonialContainer {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .stepCard,
+  .featureItem,
+  .testimonialCard {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+
+  .specialtyGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .footerContainer {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .footerColumn {
+    min-width: unset;
+    flex-basis: 100%;
+  }
+
+  .footerBottom {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .footerLegal {
+    margin-bottom: 15px;
+  }
+
+  .footerLegal a {
+    margin: 0 10px;
+  }
+}
+
+@media (max-width: 480px) {
+    .ctaSection h2 {
+      font-size: 2rem;
+    }
+    .heroSection h1 {
+      font-size: 2rem;
+    }
+    .specialtyGrid {
+      grid-template-columns: 1fr;
+    }   }

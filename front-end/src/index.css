@@ -1,0 +1,30 @@
+
+:root {
+  --brand-green: #3a5a40; /* The Primary Action Color (Wellness/Trust) */
+  --brand-dark: #1e3a24; /* Darker green for deep contrast/text (Authority) */
+  --brand-light-green: #EAF2EA; /* Lighter green for hover states (Approachability) */
+  --brand-light: #eaf2ea; /* Very light green for subtle sections (Calm) */
+  --text-light: #ffffff;
+  --text-dark: #121212;
+  --text-secondary: #555;
+  --background-light: #ffffff;
+  --background-grey: #f8f9fa; /* Slightly brighter background for sections */
+  --border-color: #e0e0e0;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 15px rgba(0, 0, 0, 0.08);
+  --transition-fast: 0.2s ease-in-out;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.87);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}

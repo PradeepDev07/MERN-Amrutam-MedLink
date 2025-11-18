@@ -1,0 +1,213 @@
+
+.profileCard{
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        background-color: #ffffff;
+        border: 0.5px solid black;
+        overflow: hidden;
+        width: 100%;
+        position: relative;
+        max-width:500px ;
+        margin-bottom: 2rem;
+}
+.profile-image-container {
+                position: absolute;
+        top: 100px;
+        left: 50%;
+        margin-top: -60px;
+        margin-left: -60px;
+        
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        border: 3px solid #ffffff;
+        width: 120px;
+        height: 120px;
+
+        }
+
+
+.profile-card-container {
+        width: 100%;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #000000;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+
+        overflow: hidden;
+        
+        }
+.profile-card-bg {
+        background:url("../../../assets/profilBg.png");
+        background-size: cover;
+        background-position: center;
+        height: 120px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        }
+        .profile-details {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        margin-top: 25px;
+        gap: 0.5rem;
+
+        }
+       .profile-details .doctor-name {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #2D2D2D;
+        }
+        .profile-details .doctor-specialization {
+        font-size: 1rem;
+        color: #3A643B;/* green color */
+        }
+        .profile-details .doctor-location {
+        font-size: 0.9rem;
+        color: #777777;/* light gray color */
+        }
+        .profile-details .star-rating {
+        display: flex;
+        align-items: center;
+        }
+        
+.appointment-link{
+        text-decoration: none;
+        color: white;
+}
+     
+
+  .profile-image {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 1px solid white;
+
+        }
+
+        .followers-bookAppointment{
+        display: flex;
+
+        flex-direction: column;
+        gap:10px;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0 1.5rem 1.5rem 1.5rem;
+        }
+        .followers-bookAppointment .appointment-button {
+        margin-top: 10px;
+        width: 100%;
+        max-width: 300px;
+        padding: 10px;
+        background-color: #3A643B; /* green color */
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 1rem;
+        cursor: pointer;
+        font-weight: 550;
+        }
+.follower-content{
+        display: flex;
+        color: #3A643B;
+        gap:20px;
+        }
+ 
+
+        .ratingStarFilled{
+        color: #ce9805;
+
+        }
+        .star-rating{
+        gap: 5px;
+        }
+        .profileImage-hidden{
+        display: none;
+        }
+
+
+
+        /**** Responsive Styles tab ****/
+@media screen and (min-width:770px) {
+        .profileCard{
+        width: 100%;
+        max-width: 700px;
+        }
+.profile-card-bg {
+        
+        height:70px;}
+.profile-card-container{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+}
+ 
+         
+         .followers-bookAppointment{
+
+        flex-direction: row;}
+
+
+        /** Adjust profile detail size **/
+        .profile-details {
+        padding: 0.5rem;
+        width: 50%;
+        align-items: flex-start;
+
+
+        }
+        .profile-details .doctor-name {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #2D2D2D;
+        }
+        .profile-details .doctor-specialization {
+        font-size: 0.7rem;
+        color: #3A643B;/* green color */
+        }
+        .profile-details .doctor-location {
+        font-size: 0.7rem;
+        color: #777777;/* light gray color */
+                
+        }
+         .profile-details .star-rating {
+        display: flex;
+        align-items: center;
+
+        gap: 5px;
+        font-size: 0.6rem;
+
+        }
+
+        /**hidden image**/
+        .profile-image-container{
+        position: static;
+        margin: 0;
+        border: 0;
+        width: 30%;
+        padding: 0;
+
+        }
+        /*show image*/
+
+       
+
+
+}
+
+@media screen and (min-width:1000px) {
+
+         .profileCard{
+        max-width: 100%;
+
+        }
+}

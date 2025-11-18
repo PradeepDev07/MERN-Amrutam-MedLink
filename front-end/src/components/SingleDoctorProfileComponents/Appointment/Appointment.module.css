@@ -1,0 +1,209 @@
+/* Main container for the appointment card */
+.container {
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 24px;
+  max-width: 500px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Base styles for section headings */
+.AppointmentFees h3,
+.SelectYourModeOfSession h3,
+.AvailableDates h3,
+.TimeSlots h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+/* Section for Appointment Fees */
+.AppointmentFees {
+  padding-bottom: 16px;
+  display: flex;
+    align-items: center;
+    justify-content: space-between;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+
+.fee {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #3A643B; /* Using green from your other styles */
+  margin: 0;
+}
+
+/* Section for Session Modes */
+.SelectYourModeOfSession,
+.AvailableDates,
+.TimeSlots {
+  padding: 16px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.ModesList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ModeItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.ModeItem:hover {
+  background-color: #f9f9f9;
+}
+
+.ModeItem.Selected {
+  background-color: #EAF2EA; /* Light green */
+  border-color: #3A643B; /* Dark green */
+}
+
+.modeType {
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.modeDuration {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.TickIcon {
+  color: #3A643B; /* Dark green */
+  font-size: 1.2rem;
+}
+
+/* Section for Available Dates */
+.DatesList {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto; /* Allows horizontal scrolling if needed */
+  padding-bottom: 5px;
+}
+
+.DateItem {
+  min-width: 100px;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  text-align: center;
+  flex: 1;
+  cursor: pointer;
+}
+.selectedDate {
+  background-color: #3A643B; /* Dark green */
+  color: #ffffff;
+  border-color: #3A643B;
+}
+.date {
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin: 0 0 4px 0;
+}
+
+.slots {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+
+/* Section for Time Slots */
+.TimeSection {
+  margin-bottom: 12px;
+}
+
+.TimeSection h4 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #555;
+  margin: 0 0 8px 0;
+}
+
+.SlotList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+}
+
+.SlotItem {
+  padding: 8px 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  flex: 1;
+  transition: all 0.2s ease-in-out;
+}
+
+.SlotItem:hover {
+  background-color: #f9f9f9;
+}
+
+.SlotItem.SelectedSlot {
+  background-color: #3A643B; /* Dark green */
+  color: #ffffff;
+  border-color: #3A643B;
+}
+
+/* Section for Action Button */
+.AppointmentButton {
+  margin-top: 20px;
+}
+
+.button {
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #3A643B; /* Dark green */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-color: #2e502e; /* Darker green */
+}
+
+
+@media (min-width: 770px) {
+    .container{
+        width: 100%;
+        max-width: 700px;
+    }   
+    }
+	
+
+
+
+
+@media screen and (min-width: 1000px) {
+	.container{
+		max-width: 100%;
+	}
+
+}
+.selected-date{
+background: #d7fad7;
+
+    border-color: #3f3636;
+}
