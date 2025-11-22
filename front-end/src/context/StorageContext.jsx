@@ -12,7 +12,7 @@ export const StorageContext = createContext({
   removeBookedAppointment: () => {},
 });
 
-const StorageProvider = ({ children }) => {
+export const StorageProvider = ({ children }) => {
   const [followingDoctors, setFollowingDoctors] = useState([]);
   const [bookedAppointments, setBookedAppointments] = useState([]);
 
@@ -59,4 +59,4 @@ const StorageProvider = ({ children }) => {
   );
 };
 
-export default StorageProvider;
+

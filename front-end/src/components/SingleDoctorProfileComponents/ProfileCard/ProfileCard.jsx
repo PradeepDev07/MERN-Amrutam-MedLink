@@ -2,6 +2,8 @@ import { FaStar } from 'react-icons/fa'
 import styles from './ProfileCard.module.css'
 
 import { VscVerifiedFilled } from "react-icons/vsc";
+import { useContext } from 'react'
+import { StorageContext } from '../../../context/StorageContext'
 
 const buildStars = (rating) => {
   const filledCount = Math.round(Number(rating) || 0)
@@ -9,6 +11,7 @@ const buildStars = (rating) => {
 }
 
 const ProfileCard = ({
+  id,
   doctorName,
   doctorImage,
   doctorRating,
@@ -19,6 +22,19 @@ const ProfileCard = ({
   posts,
   appointment,
 }) => {
+  const { followingDoctors, followDoctor, unfollowDoctor } = useContext(StorageContext)
+
+  const isFollowing = Boolean(followingDoctors.find(d => d && d.id === id))
+
+  const handleToggleFollow = () => {
+    if (!id) return
+    if (isFollowing) {
+      unfollowDoctor(id)
+    } else {
+      // provide minimal doctor object to context
+      followDoctor({ id, name: doctorName, image: doctorImage, specialization: doctorSpecialization, location: doctorLocation })
+    }
+  }
   const formattedRating = Number(doctorRating) ? Number(doctorRating).toFixed(1) : '—'
   const appointmentLabel =
     appointment?.actionButton || appointment?.buttonLabel || appointment || 'Book an Appointment'
@@ -66,7 +82,12 @@ const ProfileCard = ({
           </div>
         </div>
 
-        <button className={styles["appointment-button"]}><a href="#BookAppointment" className={styles["appointment-link"]}>Book an Appointment</a></button>
+        <div className={styles["action-buttons"]}>
+          <button className={styles["follow-button"]} onClick={handleToggleFollow}>
+            {isFollowing ? 'Following' : 'Follow'}
+          </button>
+          <button className={styles["appointment-button"]}><a href="#BookAppointment" className={styles["appointment-link"]}>Book an Appointment</a></button>
+        </div>
         </div>
 
      

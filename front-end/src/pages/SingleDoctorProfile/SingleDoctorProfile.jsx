@@ -50,6 +50,7 @@ const SingleDoctorProfile = () => {
     const handleSuccess = () => {
 
         const profileCardData = {
+            id: doctor.id,
             doctorName: doctor.name,
             doctorImage: doctor.image,
             doctorRating: doctor.rating,
@@ -66,7 +67,7 @@ const SingleDoctorProfile = () => {
         return (
         <div className={style.SingleDoctorProfile}>
         <div className={style.profileContainer}>
-         <ProfileCard {...profileCardData} />
+            <ProfileCard {...profileCardData} />
          <div className={style.aboutContainer}>
             <div className={style.aboutInner}>
             <ProfileAbout about={doctor.about} />
@@ -76,7 +77,7 @@ const SingleDoctorProfile = () => {
             <FeaturedReviews featuredReviews={doctor.featuredReviews} />
             </div>
             <div className={style.aboutOuter}>
-              <Appointment appointment={doctor.appointment} />
+                            <Appointment appointment={doctor.appointment} doctor={{ id: doctor.id, name: doctor.name, image: doctor.image }} />
             </div>
         </div>
         </div>

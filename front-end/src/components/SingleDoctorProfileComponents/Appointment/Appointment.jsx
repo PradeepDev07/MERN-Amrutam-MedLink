@@ -1,6 +1,8 @@
 import styles from './Appointment.module.css'
 import { TiTickOutline } from "react-icons/ti";
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import { StorageContext } from '../../../context/StorageContext'
+import { toast } from 'react-toastify'
 
 const Appointment = (props) => {
   const {
@@ -36,9 +38,25 @@ const Appointment = (props) => {
   const handleDateSelect = (date) => setSelectedDate(date);
   const handleTimeSelect = (time) => setSelectedTime(time);
 
+  const { addBookedAppointment } = useContext(StorageContext)
+
   const handleSubmit = () => {
-    alert(`✅ Appointment booked!\n\nMode: ${selectedMode}\nDate: ${selectedDate}\nTime: ${selectedTime}`);
-    console.log("Booking Details:", { selectedMode, selectedDate, selectedTime });
+    const booking = {
+      id: `${Date.now()}`,
+      mode: selectedMode,
+      date: selectedDate,
+      time: selectedTime,
+      fee,
+      doctor: props.doctor || null,
+      createdAt: new Date().toISOString(),
+    }
+
+    // save to context
+    if (addBookedAppointment) addBookedAppointment(booking)
+
+    // show toast notification instead of alert
+    toast.success(`Appointment booked — ${selectedMode} • ${selectedDate} • ${selectedTime}`)
+    console.log("Booking Details:", booking);
   };
 
   return (
