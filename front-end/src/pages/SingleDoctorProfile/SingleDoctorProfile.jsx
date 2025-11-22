@@ -25,6 +25,7 @@ const SingleDoctorProfile = () => {
     const [status, setStatus] = useState(doctorDataLoader.init)
 
     useEffect(() => {
+         window.scrollTo(0, 0)
         const doctorId = Number(Id)
         console.log('[SingleDoctorProfile] Looking up doctor', { doctorId })
 
