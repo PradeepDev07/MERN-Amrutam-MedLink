@@ -2,7 +2,7 @@ import styles from './Appointment.module.css'
 import { TiTickOutline } from "react-icons/ti";
 import { useState, useContext } from 'react';
 import { StorageContext } from '../../../context/StorageContext'
-import { toast } from 'react-toastify'
+import { NotificationContext } from '../../../context/NotificationContext'
 
 const Appointment = (props) => {
   const {
@@ -39,6 +39,7 @@ const Appointment = (props) => {
   const handleTimeSelect = (time) => setSelectedTime(time);
 
   const { addBookedAppointment } = useContext(StorageContext)
+  const { showNotification } = useContext(NotificationContext)
 
   const handleSubmit = () => {
     const booking = {
@@ -54,13 +55,20 @@ const Appointment = (props) => {
     // save to context
     if (addBookedAppointment) addBookedAppointment(booking)
 
-    // show toast notification instead of alert
-    toast.success(`Appointment booked — ${selectedMode} • ${selectedDate} • ${selectedTime}`)
+    // show in-app notification
+    try {
+      const doctorName = booking.doctor?.name || 'Doctor'
+      showNotification({ message: `Booked with ${doctorName} — ${selectedMode} • ${selectedDate} • ${selectedTime}`, type: 'success', timeout: 4000 })
+    } catch (e) {
+      // eslint-disable-next-line no-console
+      console.log('Notification failed', e)
+    }
+
     console.log("Booking Details:", booking);
   };
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="BookAppointment">
       {/* Appointment Fees */}
       <div className={styles.AppointmentFees}>
         <h3>Appointment Fees</h3>
@@ -138,10 +146,11 @@ const Appointment = (props) => {
       </div>
 
       {/* Button */}
-      <div className={styles.AppointmentButton} id="BookAppointment">
+      <div className={styles.AppointmentButton} >
         <button className={styles.button} onClick={handleSubmit}>
           {actionButton}
         </button>
+        
       </div>
     </div>
   );

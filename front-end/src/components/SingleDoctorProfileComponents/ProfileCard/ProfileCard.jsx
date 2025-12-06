@@ -83,8 +83,8 @@ const ProfileCard = ({
         </div>
 
         <div className={styles["action-buttons"]}>
-          <button className={styles["follow-button"]} onClick={handleToggleFollow}>
-            {isFollowing ? 'Following' : 'Follow'}
+          <button className={styles["follow-button"]} data-content={isFollowing ? "unfollow" : "follow"} onClick={handleToggleFollow}>
+            {isFollowing ? 'unfollow' : 'follow'}
           </button>
           <button className={styles["appointment-button"]}><a href="#BookAppointment" className={styles["appointment-link"]}>Book an Appointment</a></button>
         </div>

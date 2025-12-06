@@ -6,13 +6,12 @@ import { CiTwitter } from "react-icons/ci";
 
 import { useState } from 'react';
 const ProfileAbout = ({ about }) => {
-    const [isFollowing, setIsFollowing] = useState(false);
     const [showMore, setShowMore] = useState(false);
 
     const { title, description, languagesSpoken } = about;
 
   return (<div className={style.profileContainer}>
-    <div className={style.aboutContainer}><h1 >{title}</h1><button className={isFollowing ? style.following : style.follow} onClick={() => setIsFollowing(!isFollowing)}>{isFollowing ? 'Unfollow' : 'Follow'}</button></div>
+    <div className={style.aboutContainer}><h1 >{title}</h1></div>
   <section aria-label="About the Doctor" className={style.profileAbout}>
     
 

@@ -1,8 +1,8 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import 'react-toastify/dist/ReactToastify.css'
-import { ToastContainer } from 'react-toastify'
+import { NotificationProvider } from './context/NotificationContext'
+import Notifications from './components/Notifications/Notifications'
 import App from './App.jsx'
 import { MenuProvider } from './context/MenuContext';
 import { fetchUsers } from './storage/api';
@@ -20,19 +20,17 @@ async function hydrateAndRender() {
   // sanity logs to help debug any invalid element type issues
   try {
     // eslint-disable-next-line no-console
-    console.log('DEBUG MOUNT', { MenuProvider: typeof MenuProvider, StorageProvider: typeof StorageProvider, App: typeof App, ToastContainer: typeof ToastContainer })
+    console.log('DEBUG MOUNT', { MenuProvider: typeof MenuProvider, StorageProvider: typeof StorageProvider, App: typeof App, NotificationProvider: typeof NotificationProvider, Notifications: typeof Notifications })
   } catch (e) {}
 
   createRoot(document.getElementById('root')).render(
     <StrictMode> 
       <MenuProvider>
         <StorageProvider>
-        <App />
-        {typeof ToastContainer === 'function' ? (
-          <ToastContainer position="top-right" autoClose={4000} hideProgressBar={false} closeOnClick pauseOnHover draggable />
-        ) : (
-          null
-        )}
+          <NotificationProvider>
+            <App />
+            <Notifications />
+          </NotificationProvider>
         </StorageProvider>
       </MenuProvider>
     </StrictMode>,

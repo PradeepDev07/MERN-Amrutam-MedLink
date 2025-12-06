@@ -121,6 +121,38 @@
         color: #3A643B;
         gap:20px;
         }
+
+/* Action buttons wrapper added for follow/book buttons */
+.action-buttons{
+        display:flex;
+        flex-direction: column;
+        gap:10px;
+        width:100%;
+        justify-content:center;
+        align-items:center;
+}
+
+.follow-button{
+        background: transparent;
+        width: 100%;
+        max-width: 220px;
+        border: 2px solid #3A643B;
+        color: #3A643B;
+        padding: 8px 14px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: 600;
+}
+.follow-button[data-content="unfollow"]{
+        border: 2px solid #d9534f;
+        color: #d9534f;
+}       
+
+.follow-button:hover{ background: rgba(58,100,59,0.08); }
+
+.action-buttons .appointment-button{
+        max-width: 220px;
+}
  
 
         .ratingStarFilled{
@@ -138,6 +170,10 @@
 
         /**** Responsive Styles tab ****/
 @media screen and (min-width:770px) {
+        .action-buttons{
+                display: flex;
+                flex-direction: column;
+        }
         .profileCard{
         width: 100%;
         max-width: 700px;
@@ -209,5 +245,9 @@
          .profileCard{
         max-width: 100%;
 
+        }
+        .action-buttons{
+                display: flex;
+                flex-direction: column;
         }
 }

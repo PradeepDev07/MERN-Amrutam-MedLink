@@ -1,21 +1,25 @@
 import Navbar from '../../components/Navbar/Navbar'
 import { useContext } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { StorageContext } from '../../context/StorageContext'
 import styles from './FollowingDoctors.module.css'
 
 const FollowingDoctors = () => {
   const { followingDoctors, unfollowDoctor } = useContext(StorageContext)
+  const navigate = useNavigate()
 
   return (
+    <>
+    <Navbar />
     <div className={styles.container}>
-      <Navbar />
+      
       <div className={styles.inner}>
         <h1 className={styles.title}>Following Doctors</h1>
 
         {followingDoctors && followingDoctors.length > 0 ? (
           <ul className={styles.list}>
             {followingDoctors.map((doc) => (
-              <li key={doc.id} className={styles.item}>
+              <li key={doc.id} className={styles.item} onClick={()=>navigate("/doctors/{id}".replace("{id}",doc.id))}>
                 <div className={styles.info}>
                   {doc.image && <img src={doc.image} alt={doc.name} className={styles.avatar} />}
                   <div>
@@ -34,6 +38,7 @@ const FollowingDoctors = () => {
         )}
       </div>
     </div>
+    </>
   )
 }
 
