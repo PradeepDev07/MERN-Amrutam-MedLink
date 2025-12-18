@@ -7,8 +7,9 @@ const BookedAppointments = () => {
   const { bookedAppointments, removeBookedAppointment } = useContext(StorageContext)
 
   return (
+    <><Navbar />
     <div className={styles.container} >
-        <Navbar />
+       
       <h1 className={styles.title}>Booked Appointments</h1>
 
       {bookedAppointments && bookedAppointments.length > 0 ? (
@@ -30,6 +31,7 @@ const BookedAppointments = () => {
         <p className={styles.empty}>No booked appointments yet.</p>
       )}
     </div>
+    </>
   )
 }
 

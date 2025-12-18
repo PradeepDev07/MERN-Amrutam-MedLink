@@ -1,36 +1,89 @@
-# React + Vite
+# Amrutam-MedLink
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Amrutam-MedLink is a comprehensive healthcare platform designed to bridge the gap between patients and doctors. It allows users to easily find doctors, book appointments, and manage their health profiles, while providing doctors with a platform to showcase their expertise and manage their practice.
 
-Currently, two official plugins are available:
+## 🚀 Main Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+*   **Find Doctors:** Search for doctors by specialization, location, and availability.
+*   **Book Appointments:** Seamlessly book appointments with your preferred doctors.
+*   **User Profiles:** Manage your personal information and health history.
+*   **Doctor Profiles:** View detailed profiles of doctors, including their experience, qualifications, and reviews.
+*   **Authentication:** Secure Login and Signup functionality for users.
+*   **Responsive Design:** Optimized for both desktop and mobile devices.
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+*   **Frontend:** React (Vite), React Router, CSS Modules
+*   **Backend:** Node.js, Express (Simple JSON-based storage)
+*   **Data Storage:** JSON file (`users.json`)
 
-## Expanding the ESLint configuration
+## 📦 Installation and Running
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+To run this project, you need to start both the backend server and the frontend application.
 
-## Local storage server (users.json)
+### Prerequisites
 
-This project includes a small local server used to persist `src/storage/users.json` when users sign up.
+*   Node.js installed on your machine.
 
-Start the server in a separate terminal before using the signup flow:
+### 1. Backend Setup (Simple Server)
 
-```bash
-npm run serve-storage
-```
+The backend is a simple Node.js server that handles user authentication and data storage using a JSON file.
 
-Then start the app as usual:
+1.  Navigate to the server directory:
+    ```bash
+    cd back-end/server
+    ```
 
-```bash
-npm run dev
-```
+2.  Install dependencies:
+    ```bash
+    npm install
+    ```
 
-Notes:
-- The client expects the storage server at http://localhost:4000. If you change the port, update `src/storage/api.js`.
-- If the server isn't running the app will still work; new signups will be kept in-memory for the session but won't be written to `users.json`.
+3.  Start the server:
+    ```bash
+    npm start
+    ```
+    The server will start running at `http://localhost:4000`.
+
+### 2. Frontend Setup
+
+1.  Open a new terminal and navigate to the frontend directory:
+    ```bash
+    cd front-end
+    ```
+
+2.  Install dependencies:
+    ```bash
+    npm install
+    ```
+
+3.  Start the development server:
+    ```bash
+    npm run dev
+    ```
+    The application will be available at `http://localhost:5173` (or the port shown in your terminal).
+
+## 🔑 Dummy Login Data
+
+You can use the following credentials to log in and test the application:
+
+| Role | Username | Password | Email |
+| :--- | :--- | :--- | :--- |
+| **Admin** | `admin` | `admin123` | `admin@example.com` |
+| **User** | `rahul` | `12345` | `rahul@gmail.com` |
+| **User** | `pradeepdev` | `12345` | `pradeep01273@gmail.com` |
+
+## 📂 Project Structure
+
+*   **`front-end/`**: Contains the React application.
+    *   `src/pages/`: Individual pages like Home, Login, FindDoctors, etc.
+    *   `src/components/`: Reusable UI components.
+    *   `src/context/`: React Context for state management.
+*   **`back-end/`**: Contains the server-side code.
+    *   `server/index.js`: Main server file.
+    *   `server/src/storage/users.json`: JSON file storing user data.
+
+## 📝 Notes
+
+*   The backend uses a simple `users.json` file to persist user data. This is for demonstration purposes and easy setup.
+*   Ensure the backend server is running on port `4000` for the frontend to communicate correctly.
