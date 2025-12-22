@@ -235,7 +235,8 @@ This project is part of the NXTWAVE Projects portfolio.
 
 - NXTWAVE for project guidance
 - React and Vite communities for excellent documentation
-
+##Deploy
+- **vercel** : https://mern-amrutam-med-link.vercel.app/
 
 ---
 
